@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include "priority_queue.h"
 
+#define NO_ARGUMENT
+
 using namespace std;
 
 template <typename T>
@@ -30,7 +32,7 @@ int main(int argc, char* argv[]){
 	pushQueue(&priQueue,598);
 	pushQueue(&priQueue,302);
 
-	if( argc > 1 ){
+	if( argc != NO_ARGUMENT ){
 		customNumber = atoi(argv[1]);
 		if( customNumber > -500 && customNumber < 2000 ){
 			pushQueue(&priQueue,customNumber);
